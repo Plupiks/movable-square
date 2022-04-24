@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Morning Develop</title>
+	<meta name="description" content="">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="assets/img/favicon.png">
+	<meta property="og:image" content="assets/images/dist/preview.jpg">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+	<style>
+		#resizable {
+			width: 150px;
+			height: 150px;
+			background-color: #5c9784;
+			opacity: .9;
+			position: absolute;
+		}
+
+		.ui-icon,
+		.ui-widget-content .ui-icon {
+			background-image: url(images/pipsik.png);
+		}
+
+		.ui-icon-gripsmall-diagonal-se {
+			background-position: -10px -10px;
+		}
+
+		.ui-icon {
+			width: 16px;
+			height: 16px;
+		}
+
+
+
+		#resizable {
+			background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(0, white 50%, transparent 50%), linear-gradient(0, white 50%, transparent 50%);
+			background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+			background-size: 9px 2px, 9px 2px, 2px 9px, 2px 9px;
+			animation: running-contour 0.5s linear infinite;
+		}
+
+		@keyframes running-contour {
+			from {
+				background-position: 0 0, 9px 100%, 0 9px, 100% 0;
+			}
+
+			to {
+				background-position: 9px 0, 0 100%, 0 0, 100% 9px;
+			}
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+
+
+
+	<div class="creat_yml ">
+
+
+
+		<div class="img" style="position: relative;overflow: hidden;width: 802px;float: left; margin: 10px;">
+			<div id="resizable" class="ui-widget-content" style="left: 0px;top: 0px;"></div>
+			<img src="images/screenshot.jpg" style="width: 800px;height: auto;" alt="">
+		</div>
+
+
+
+		<div class="config">
+			<button class="button_default active creat creat_section">Section</button>
+			<button class="button_default creat creat_block">Block</button>
+			<button class="button_default creat creat_slider">Slider</button>
+			<button class="button_default creat creat_map">Mao</button>
+
+			<section></section>
+
+			<button class="button_default append apend_section"> > </button>
+			<button class="button_default append apend_block"> > </button>
+			<button class="button_default append apend_slider"> > </button>
+			<button class="button_default append apend_map"> > </button>
+
+
+
+			<button class="button_default" id="button-copy">Copy config</button>
+
+			<p>
+				asdasdasd
+				asd
+				asd
+				asd
+
+			</p>
+
+		</div>
+
+		<div id="yml">
+			<div>name: B04-orange</div>
+			<div>blocks:</div>
+			<br>
+			<pre></pre>
+		</div>
+
+		<code class="metki"></code>
+
+
+
+
+	</div>
+
+
+	<!-- <canvas id="area" style="width: 100%; height: 800px;background: url(images/bg.png)"></canvas> -->
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script>
+		$("#resizable").resizable({
+			containment: '.img'
+		});
+		$('#resizable').draggable({
+			containment: '.img',
+			grid: [1, 1]
+		});
+	</script>
+	<script src="libs/clipboard.min.js"></script>
+
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/21.0.1/min/jcanvas.min.js" integrity="sha512-pu2L+33GBCuTrTU3mNJphG2Hm2JKlLA01280LIiz29D40f/UFOU5dEVxVuW46p+HZeZhXvQsUxtVFxPabX9S9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+	<script src="js/common.js"></script>
+</body>
+
+</html>
